@@ -86,8 +86,9 @@ public class Practica {
                     ImageIO.write(bImage, extension, bos );
                     byte [] data = bos.toByteArray();
                     id3v2Tag.setAlbumImage(data, "image/"+extension);
-                    String nuevacancion = "D:\\Java_Projects\\Metadatos\\Metadatos\\musica\\nuevo_audio.mp3";
+                    String nuevacancion = "./musica/nuevo_audio.mp3";
                     mp3file.save(nuevacancion);
+                    System.out.println("\n\nSe guardó la nueva canción en: " + nuevacancion);
                 } else {
                     System.out.println("No se seleccionó ningún archivo");
                     archivo = null;
